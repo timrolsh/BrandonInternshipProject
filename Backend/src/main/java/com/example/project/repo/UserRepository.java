@@ -1,6 +1,5 @@
 package com.example.project.repo;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,7 +19,7 @@ public class UserRepository {
     private static UserRepository db = new UserRepository();
 
     public UserRepository() {
-        try (InputStream input = new FileInputStream("config.properties")) {
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
             Properties prop = new Properties();
             
             prop.load(input);
