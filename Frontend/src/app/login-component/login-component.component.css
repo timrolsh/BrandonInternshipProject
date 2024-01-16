@@ -1,0 +1,81 @@
+/* Container for the login form */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+/* Login form */
+.login-form {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label for form inputs */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Login button */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Login button hover effect */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Registration button */
+.btn.btn-link {
+  background-color: #28a745; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; /* Add some space below the login button */
+}
+
+/* Registration button hover effect */
+.btn.btn-link:hover {
+  background-color: #218838; /* Darker green color */
+}
+
+/* Error message */
+.error-message {
+  color: #ff0000;
+  margin-top: 10px;
+  text-align: center;
+}
