@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   private currentUserSubject = new User('');
@@ -19,5 +19,4 @@ export class UserService {
   getCurrentUser() {
     return this.currentUserSubject;
   }
-
 }

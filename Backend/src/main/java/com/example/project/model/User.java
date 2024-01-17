@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 @Entity
 public class User {
 
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
 

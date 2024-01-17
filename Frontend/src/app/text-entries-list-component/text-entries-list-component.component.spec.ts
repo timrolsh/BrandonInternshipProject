@@ -8,7 +8,7 @@ describe('TextEntriesListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TextEntriesListComponent]
+      declarations: [TextEntriesListComponent],
     });
     fixture = TestBed.createComponent(TextEntriesListComponent);
     component = fixture.componentInstance;

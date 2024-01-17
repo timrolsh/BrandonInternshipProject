@@ -10,15 +10,15 @@ import com.example.project.repo.TextInputRepository;
 @SpringBootApplication
 public class ProjectApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProjectApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ProjectApplication.class, args);
+    }
 
-	@Bean
-	CommandLineRunner run(TextInputRepository textInputRepository) {
-		return orgs -> {
-			
-		};
-	}
+    @Bean
+    CommandLineRunner run(TextInputRepository textInputRepository) {
+        return orgs -> {
+
+        };
+    }
 
 }

@@ -7,16 +7,16 @@ import { TextInputComponent } from './text-input-component/text-input-component.
 import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegistrationComponent},
-    { path: 'list', component: TextEntriesListComponent },
-    { path: 'add-entry', component: TextInputComponent },
-    { path: 'registration', component: RegistrationComponent },
-  ];
-  
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegistrationComponent },
+  { path: 'list', component: TextEntriesListComponent },
+  { path: 'add-entry', component: TextInputComponent },
+  { path: 'registration', component: RegistrationComponent },
+];
+
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-  })
-  export class AppRoutingModule { }
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}

@@ -34,7 +34,7 @@ public class TextInputServiceImplementation implements TextInputService {
         return TextInputRepository.loadTextInputs();
     }
 
-   @Override
+    @Override
     public TextInput[] loadTextInputsByUser(Long userId) {
         log.info("Fetching Text Inputs by ID: {}", userId);
         return TextInputRepository.loadTextInputsByUser(userId);
@@ -49,9 +49,9 @@ public class TextInputServiceImplementation implements TextInputService {
     @Override
     public TextInput[] loadTextInputsByTime(long startTime, long endTime) {
         log.info("Fetching Text Inputs by times: {}, {}", startTime, endTime);
-        
+
         return TextInputRepository.loadTextInputsByTime(startTime, endTime);
-        
+
     }
 
 }

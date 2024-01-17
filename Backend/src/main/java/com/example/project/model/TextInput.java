@@ -1,6 +1,5 @@
 package com.example.project.model;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +9,7 @@ import jakarta.persistence.Id;
 @Entity
 public class TextInput {
 
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long textId;
 
@@ -43,7 +42,7 @@ public class TextInput {
     public long getTime() {
         return time;
     }
-    
+
     public void setTime(long time) {
         this.time = time;
     }

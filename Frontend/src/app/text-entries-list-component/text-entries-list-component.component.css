@@ -1,29 +1,29 @@
 h2 {
-    color: #007bff;
-  }
-  
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  li {
-    background-color: #ffffff;
-    border: 1px solid #e1e1e1;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #c0392b;
-  }
+  color: #007bff;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c0392b;
+}

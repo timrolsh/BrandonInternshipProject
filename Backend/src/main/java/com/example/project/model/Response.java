@@ -17,7 +17,7 @@ public class Response {
     protected Instant timeStamp;
     protected String message;
     protected Map<?, ?> data;
-    
+
 }
 // password hashing
 // java doc & comments

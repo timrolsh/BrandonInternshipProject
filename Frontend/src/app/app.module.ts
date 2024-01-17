@@ -10,7 +10,7 @@ import { TextEntriesListComponent } from './text-entries-list-component/text-ent
 import { TextInputComponent } from './text-input-component/text-input-component.component';
 import { AuthService } from './services/auth.service';
 import { RegistrationComponent } from './registration/registration.component';
-import { UserService } from './services/user.service'
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -18,15 +18,10 @@ import { UserService } from './services/user.service'
     TextEntriesListComponent,
     TextInputComponent,
     AppComponent,
-    RegistrationComponent
+    RegistrationComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [AuthService, UserService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

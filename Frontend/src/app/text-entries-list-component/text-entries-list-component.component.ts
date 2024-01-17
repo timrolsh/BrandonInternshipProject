@@ -3,40 +3,45 @@ import { TextEntryService } from '../services/text-entry.service';
 import { TextEntry } from '../models/text-entry.model';
 
 @Component({
-    selector: 'app-text-entries-list',
-    templateUrl: './text-entries-list-component.component.html',
-    styleUrls: ['./text-entries-list-component.component.css']
+  selector: 'app-text-entries-list',
+  templateUrl: './text-entries-list-component.component.html',
+  styleUrls: ['./text-entries-list-component.component.css'],
 })
 export class TextEntriesListComponent implements OnInit {
-    textEntries: TextEntry[] = [];
-    isAdmin: boolean = false; // Will get this from AuthService based on the logged-in user's role.
+  textEntries: TextEntry[] = [];
+  isAdmin: boolean = false; // Will get this from AuthService based on the logged-in user's role.
 
-    constructor(private textEntryService: TextEntryService, private cdr: ChangeDetectorRef) { }
+  constructor(
+    private textEntryService: TextEntryService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
-    ngOnInit() {
-        this.textEntryService.getTextInputs().subscribe(entries => {
-            console.log('Response received:', entries);
-            
-            this.textEntries = entries;
+  ngOnInit() {
+    this.textEntryService.getTextInputs().subscribe((entries) => {
+      console.log('Response received:', entries);
 
-            console.log('Entry Array:', this.textEntries);
+      this.textEntries = entries;
 
-            this.cdr.detectChanges();
-        });
+      console.log('Entry Array:', this.textEntries);
+
+      this.cdr.detectChanges();
+    });
+  }
+
+  deleteSelectedEntries() {
+    const selectedEntries = this.textEntries.filter((entry) => entry.checked);
+    if (selectedEntries.length === 0) {
+      alert('No entries selected');
+      return;
     }
 
-    deleteSelectedEntries() {
-        const selectedEntries = this.textEntries.filter(entry => entry.checked);
-        if (selectedEntries.length === 0) {
-            alert('No entries selected');
-            return;
-        }
-    
-        selectedEntries.forEach(entry => {
-            this.textEntryService.deleteEntry(entry.time).subscribe(() => {
-                // Remove the entry from textEntries
-                this.textEntries = this.textEntries.filter(e => e.time !== entry.time);
-            });
-        });
-    }
+    selectedEntries.forEach((entry) => {
+      this.textEntryService.deleteEntry(entry.time).subscribe(() => {
+        // Remove the entry from textEntries
+        this.textEntries = this.textEntries.filter(
+          (e) => e.time !== entry.time
+        );
+      });
+    });
+  }
 }
