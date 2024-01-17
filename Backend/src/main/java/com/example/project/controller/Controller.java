@@ -144,7 +144,7 @@ public class Controller {
 
     // For admin users to delete a text input.
     @DeleteMapping("/delete/{time}")
-    public ResponseEntity<Response> deleteTextInput(Long time) {
+    public ResponseEntity<Response> deleteTextInput(@PathVariable long time) {
         TextInputService.deleteTextInput(time);
         return ResponseEntity.ok(
                 Response.builder()
