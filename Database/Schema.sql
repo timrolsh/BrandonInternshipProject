@@ -21,9 +21,9 @@ create table user
 
 create table text_input
 (
-    text_id  BIGINT                  not null primary key auto_increment,
-    text     varchar(255)            null,
-    username varchar(255)            not null,
-    time     timestamp default now() not null
+    text_id  BIGINT       not null primary key auto_increment,
+    text     varchar(255) not null,
+    username varchar(255) not null,
+    time     bigint       not null
 );
 
