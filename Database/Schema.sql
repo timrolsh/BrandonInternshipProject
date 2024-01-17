@@ -14,18 +14,16 @@ SET FOREIGN_KEY_CHECKS = 1;
 create table user
 (
     user_type_admin BIT default false not null,
-    user_id         BIGINT not null primary key auto_increment ,
-    password        varchar(255)      null,
-    username        varchar(255)      null
+    user_id         BIGINT            not null primary key auto_increment,
+    password        varchar(255)      not null,
+    username        varchar(255)      not null
 );
 
 create table text_input
 (
-    text_id BIGINT not null primary key auto_increment,
-    text    varchar(255)            null,
-    user_id bigint                  not null,
-    time    timestamp default now() not null,
-    constraint text_input_user_user_id_fk
-        foreign key (user_id) references user (user_id)
+    text_id  BIGINT                  not null primary key auto_increment,
+    text     varchar(255)            null,
+    username varchar(255)            not null,
+    time     timestamp default now() not null
 );
 
