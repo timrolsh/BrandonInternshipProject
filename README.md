@@ -28,6 +28,17 @@ npm install
 npm run start
 ```
 
+## Database
+
+* You can make a local copy of a MySQL DB either through workbench or through docker. The Schema to initialize the database is here [Database folder](./Database/Schema.sql)
+* To get database running on docker, run:
+
+```bash
+docker-compose up
+```
+
+* from the root of this repository, this will bring up a docker container with the database running on port 3306 locally and will run the Schema.sql file to initialize the database
+
 ## Other Notes
 
 * Run all of these commands from within the Backend and Frontend folders
