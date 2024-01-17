@@ -29,19 +29,29 @@ export class TextEntriesListComponent implements OnInit {
   }
 
   deleteSelectedEntries() {
-    const selectedEntries = this.textEntries.filter((entry) => entry.checked);
-    if (selectedEntries.length === 0) {
-      alert('No entries selected');
-      return;
-    }
+    if (
+      localStorage.getItem('username') === undefined ||
+      localStorage.getItem('username') !== 'admin'
+    ) {
+      alert(
+        "Hey, you can't delete text entries. You are not logged in as an admin. You are logged in as: " +
+          localStorage.getItem('username')
+      );
+    } else {
+      const selectedEntries = this.textEntries.filter((entry) => entry.checked);
+      if (selectedEntries.length === 0) {
+        alert('No entries selected');
+        return;
+      }
 
-    selectedEntries.forEach((entry) => {
-      this.textEntryService.deleteEntry(entry.time).subscribe(() => {
-        // Remove the entry from textEntries
-        this.textEntries = this.textEntries.filter(
-          (e) => e.time !== entry.time
-        );
+      selectedEntries.forEach((entry) => {
+        this.textEntryService.deleteEntry(entry.time).subscribe(() => {
+          // Remove the entry from textEntries
+          this.textEntries = this.textEntries.filter(
+            (e) => e.time !== entry.time
+          );
+        });
       });
-    });
+    }
   }
 }
