@@ -43,3 +43,4 @@ docker-compose up
 
 * Run all of these commands from within the Backend and Frontend folders
 * The backend will run on port 8080 and the frontend will run on port 4200
+* There is only one admin user for the database for now, the username is admin and the password is password

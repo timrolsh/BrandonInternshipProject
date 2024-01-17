@@ -22,3 +22,6 @@ create table text_input
     time     bigint       not null
 );
 
+-- Create an admin user with the username 'admin' and password 'admin'
+insert into user (user_type_admin, password, username)
+values (true, '$2a$10$/AoHb24yYXa8WA9UTUESKukqVN4pI4.Rn0YFbtwEDbrkWCduVTGjC', 'admin');
